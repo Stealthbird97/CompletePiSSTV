@@ -16,7 +16,7 @@ echo Patching pifm
 patch -N -i "$this"/src/pifm.patch
 
 echo Compiling pifm
-gcc -o pifm pifm.c
+g++ -o pifm pifm.c
 
 echo Extracting PySSTV
 tar -xvf "$this"/src/scripts/PySSTV-*.tar.gz
