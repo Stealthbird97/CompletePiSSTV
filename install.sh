@@ -19,7 +19,7 @@ echo Compiling pifm
 g++ -o pifm pifm.c
 
 echo Extracting PySSTV
-tar -xvf "$this"/src/scripts/PySSTV-*.tar.gz
+tar -xvf "$this"/scripts/PySSTV-*.tar.gz
 
 echo Installing Python Imaging
 sudo apt-get install python-imaging
