@@ -22,7 +22,7 @@ echo Extracting PySSTV
 tar -xvf "$this"/scripts/PySSTV-*.tar.gz
 
 echo Installing Python Imaging
-sudo apt-get install python-imaging
+sudo apt-get install python-imaging imagemagick
 
 read -r -p \
   'Do you want me to overwrite your /etc/rc.local with ours? If you have modified it, probably best not to... (y/N) ' overwrite
