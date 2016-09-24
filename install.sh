@@ -22,6 +22,7 @@ echo Extracting PySSTV
 tar -xvf "$this"/scripts/PySSTV-*.tar.gz
 
 echo Installing Python Imaging
+sudo apt-get update
 sudo apt-get install python-imaging imagemagick
 
 read -r -p \
