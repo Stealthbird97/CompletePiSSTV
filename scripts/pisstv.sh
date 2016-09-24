@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~
+cd HOMEDIR
 while true; do
   echo taking
   date

@@ -16,5 +16,5 @@ _IP=$(hostname -I) || true
 if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
-su - -c '~/pisstv.sh &' USERNAME
+HOMEDIR/pisstv.sh &
 exit 0
