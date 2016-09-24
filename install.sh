@@ -25,7 +25,7 @@ read -r -p \
   'Do you want me to overwrite your /etc/rc.local with ours? If you have modified it, probably best not to... (y/N) ' overwrite
 if [ "$overwrite" = "y" ]; then
   echo Replacing rc.local
-  sudo cp "$this"/config/rc.local /etc
+  sed s/USERNAME/"$USER"/g "$this"/config/rc.local | sudo tee /etc/rc.local
 else
   echo Please add \""$PWD"/pisstv.sh \&\" to your rc.local or equivalent
 fi

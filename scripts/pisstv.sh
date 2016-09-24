@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/pi
+cd ~
 while true; do
   echo taking
   date
