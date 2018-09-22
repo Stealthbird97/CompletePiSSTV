@@ -9,14 +9,19 @@ sed s@HOMEDIR@"$PWD"@g "$this"/scripts/pisstv.sh > pisstv.sh
 echo Setting pisstv script as executable
 chmod +x pisstv.sh
 
-echo Extracting PiFM
-tar -xf "$this"/src/pifm.tar.gz
+echo Installing Pi-FM-RDS Dependancies
+sudo apt-get install libsndfile1-dev
 
-echo Patching pifm
-patch -N -i "$this"/src/pifm.patch
-
-echo Compiling pifm
-g++ -o pifm pifm.c
+echo Clone Pi-FM-RDS
+git clone https://github.com/F5OEO/PiFmRds.git
+cd PiFmRds/src
+git clone https://github.com/F5OEO/librpitx.git
+cd librpitx/src
+echo Make Pi-FM-RDS
+make
+cd ../../
+make clean
+make
 
 echo Installing PySSTV
 sudo apt-get update
