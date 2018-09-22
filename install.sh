@@ -18,8 +18,8 @@ patch -N -i "$this"/src/pifm.patch
 echo Compiling pifm
 g++ -o pifm pifm.c
 
-echo Extracting PySSTV
-tar -xvf "$this"/scripts/PySSTV-0.2.7.tar.gz
+echo Installing PySSTV
+pip install PySSTV
 
 echo Installing Python Imaging
 sudo apt-get update
