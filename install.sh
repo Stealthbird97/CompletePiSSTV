@@ -19,10 +19,11 @@ echo Compiling pifm
 g++ -o pifm pifm.c
 
 echo Installing PySSTV
+sudo apt-get update
+sudo apt-get install python-pip
 pip install PySSTV
 
 echo Installing Python Imaging
-sudo apt-get update
 sudo apt-get install python-imaging imagemagick
 
 read -r -p \
