@@ -10,7 +10,7 @@ while true; do
   convert sstv.jpg -fill white -stroke black -pointsize 16 -annotate +50+50 'G3KMI de M0HWY\nQTH: University of Southampton\nWelcome!' sstv-out.jpg
   echo converting
   date
-  PYTHONPATH=PySSTV-0.2.7 python -m pysstv --mode Robot36 sstv-out.jpg sstv-out-tmp.wav
+  PYTHONPATH=/home/pi/.local/lib/python2.7/site-packages/pysstv python -m pysstv --mode Robot36 sstv-out.jpg sstv-out-tmp.wav
   touch lock
   echo moving
   mv sstv-out-tmp.wav sstv-out.wav
