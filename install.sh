@@ -25,11 +25,13 @@ make
 
 echo Installing PySSTV
 sudo apt-get update
+sudo apt-get install libjpeg-dev zlib1g-dev
+sudo apt-get install imagemagick
 sudo apt-get install python-pip
+pip install setuptools
 pip install PySSTV
 
-echo Installing Python Imaging
-sudo apt-get install python-imaging imagemagick
+
 
 read -r -p \
   'Do you want me to overwrite your /etc/rc.local with ours? If you have modified it, probably best not to... (y/N) ' overwrite
