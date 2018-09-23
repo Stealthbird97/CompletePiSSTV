@@ -23,7 +23,6 @@ while true; do
     true
   done
   cat sstv-out.wav | sudo ./PiFmRds/src/pi_fm_rds -freq 145.200 -audio - -ps G3KMI -rt "G3KMI SSTV"
-  ./pifm sstv-out.wav 145.200 48000
   echo repeating
   date
 done
