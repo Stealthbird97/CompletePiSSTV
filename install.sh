@@ -9,7 +9,13 @@ sed s@HOMEDIR@"$PWD"@g "$this"/scripts/pisstv.sh > pisstv.sh
 echo Setting pisstv script as executable
 chmod +x pisstv.sh
 
-echo Installing Pi-FM-RDS Dependancies
+echo Update Repositories
+sudo apt-get update
+
+echo Installing build essentials
+sudo apt-get install build-essential
+
+echo Installing Pi-FM-RDS dependancies
 sudo apt-get install libsndfile1-dev
 
 echo Clone Pi-FM-RDS
@@ -23,15 +29,14 @@ cd ../../
 make clean
 make
 
-echo Installing PySSTV
-sudo apt-get update
-sudo apt-get install libjpeg-dev zlib1g-dev
-sudo apt-get install imagemagick
-sudo apt-get install python-pip
-pip install setuptools
-pip install PySSTV
+cd ~
+echo Installing PiSSTV dependancies
+sudo apt-get install libgd-dev libmagic-dev
 
-
+echo Clone PiSSTV
+git clone https://github.com/sp2ong/pisstv.git
+cd pisstv
+make pisstv
 
 read -r -p \
   'Do you want me to overwrite your /etc/rc.local with ours? If you have modified it, probably best not to... (y/N) ' overwrite
