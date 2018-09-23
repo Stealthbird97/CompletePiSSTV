@@ -22,7 +22,7 @@ while true; do
   while [ -f lock ]; do
     true
   done
-  ./pi_fm_rds -freq 145.200 -audio HOMEDIR/sstv-out.wav -ps G3KMI -rt "G3KMI SSTV"
+  cat HOMEDIR/sstv-out.wav | ./pi_fm_rds -freq 145.200 -audio - -ps G3KMI -rt "G3KMI SSTV"
   ./pifm sstv-out.wav 145.200 48000
   echo repeating
   date
