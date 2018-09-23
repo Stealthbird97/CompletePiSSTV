@@ -15,6 +15,8 @@ while true; do
   echo moving
   mv sstv-out.jpg.wav sstv-out.wav
   rm -f lock
+  echo waiting
+  sleep 34 # set to approx 2 seconds less than transmit time.
 done &
 while true; do
   echo sending
