@@ -1,0 +1,6 @@
+[submodule "src/PiFmRds"]
+	path = src/PiFmRds
+	url = https://github.com/Stealthbird97/PiFmRds.git
+[submodule "src/pisstv"]
+	path = src/pisstv
+	url = https://github.com/Stealthbird97/pisstv.git
