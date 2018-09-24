@@ -13,10 +13,10 @@ echo Update Repositories
 sudo apt-get update
 
 echo Installing build essentials
-sudo apt-get install build-essential
+sudo apt-get -y install build-essential
 
 echo Installing Pi-FM-RDS dependancies
-sudo apt-get install libsndfile1-dev
+sudo apt-get -y install libsndfile1-dev
 
 cd "$this"/src/PiFmRds/src/librpitx/src
 echo Make Pi-FM-RDS
@@ -28,7 +28,7 @@ cd ../../
 mv PiFmRds ~/PiFmRds
 
 echo Installing PiSSTV dependancies
-sudo apt-get install libgd-dev libmagic-dev imagemagick
+sudo apt-get -y install libgd-dev libmagic-dev imagemagick
 
 echo Make PiSSTV
 cd pisstv
