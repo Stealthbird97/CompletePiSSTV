@@ -25,7 +25,7 @@ cd ../../
 make clean
 make
 cd ../../
-mv src/PiFmRds ~/PiFmRds
+mv PiFmRds ~/PiFmRds
 
 echo Installing PiSSTV dependancies
 sudo apt-get install libgd-dev libmagic-dev imagemagick
