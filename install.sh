@@ -33,7 +33,7 @@ sudo apt-get install libgd-dev libmagic-dev imagemagick
 echo Make PiSSTV
 cd pisstv
 make pisstv
-
+cd ~
 read -r -p \
   'Do you want me to overwrite your /etc/rc.local with ours? If you have modified it, probably best not to... (y/N) ' overwrite
 if [ "$overwrite" = "y" ]; then
