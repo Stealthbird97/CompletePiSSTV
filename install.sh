@@ -18,7 +18,7 @@ sudo apt-get install build-essential
 echo Installing Pi-FM-RDS dependancies
 sudo apt-get install libsndfile1-dev
 
-cd src/PiFmRds/src/librpitx/src
+cd "$this"/src/PiFmRds/src/librpitx/src
 echo Make Pi-FM-RDS
 make
 cd ../../
