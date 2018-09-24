@@ -18,23 +18,19 @@ sudo apt-get install build-essential
 echo Installing Pi-FM-RDS dependancies
 sudo apt-get install libsndfile1-dev
 
-echo Clone Pi-FM-RDS
-git clone https://github.com/F5OEO/PiFmRds.git
-cd PiFmRds/src
-git clone https://github.com/F5OEO/librpitx.git
-cd librpitx/src
+cd src/PiFmRds/src/librpitx/src
 echo Make Pi-FM-RDS
 make
 cd ../../
 make clean
 make
+cd ../../
+mv src/PiFmRds ~/PiFmRds
 
-cd ~
 echo Installing PiSSTV dependancies
 sudo apt-get install libgd-dev libmagic-dev imagemagick
 
-echo Clone PiSSTV
-git clone https://github.com/sp2ong/pisstv.git
+echo Make PiSSTV
 cd pisstv
 make pisstv
 
