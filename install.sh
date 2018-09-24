@@ -31,7 +31,7 @@ make
 
 cd ~
 echo Installing PiSSTV dependancies
-sudo apt-get install libgd-dev libmagic-dev
+sudo apt-get install libgd-dev libmagic-dev imagemagick
 
 echo Clone PiSSTV
 git clone https://github.com/sp2ong/pisstv.git
